@@ -1,0 +1,22 @@
+articulos = [
+    ["A01", "Teclado", 3, 10],
+    ["A02", "Mouse", 8, 10],
+    ["A03", "Monitor", 2, 5],
+    ["A04", "USB", 10, 15],
+    ["A05", "Impresora", 1, 4]
+] 
+def calcular_pedido(stock_actual, stock_minimo):
+     if stock_actual < stock_minimo:
+           return stock_minimo - stock_actual
+     else:     
+          return 0
+print ("LISTA DE PEDIDOS")
+for articulo in articulos:
+        codigo = articulo[0]
+        nombre = articulo[1]
+        stock_actual = articulo[2]
+        stock_minimo = articulo[3]
+        cantidad_pedir = calcular_pedido(stock_actual, stock_minimo)
+        print("Artículo:", nombre)
+        print("Cantidad a pedir:", cantidad_pedir)
+        print("------------------") 
